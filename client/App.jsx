@@ -32,7 +32,7 @@ App = ReactMeteor.createClass({
     return (
       <div>
         <h3>You've pressed the button <span className="red-text">{this.state.clickedCount} times</span>, chump.</h3>
-        <button onClick={this.handleClick}>Click me!</button>
+        <button className="button-margin" onClick={this.handleClick}>Click me!</button>
       </div>
     );
   }

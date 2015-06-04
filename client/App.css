@@ -11,3 +11,7 @@
 .red-text {
     color: rgba(185, 5, 5, 0.8);
 }
+
+.button-margin {
+    margin: 0px 0px 0px 10px;
+}
