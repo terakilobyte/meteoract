@@ -31,7 +31,7 @@ App = ReactMeteor.createClass({
 
     return (
       <div>
-        <h3>You've clicked the button {this.state.clickedCount} times.</h3>
+        <h3>You've clicked the button {this.state.clickedCount} times, chump.</h3>
         <button onClick={this.handleClick}>Click me!</button>
       </div>
     );
