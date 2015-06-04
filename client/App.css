@@ -1,0 +1,9 @@
+.ul-stuff {
+    list-style: none;
+}
+
+.li-stuff {
+    border: 5px solid gray;
+    border-radius: 3px;
+    margin: 5px 0px 0px 0px;
+}
