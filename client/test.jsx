@@ -6,7 +6,11 @@ Test = ReactMeteor.createClass({
 
   render: function() {
     return (
-      <h3>Hi</h3>
+      <h3 className="red-text">You've clicked the button {this.props.text} times</h3>
     );
   }
 });
+
+Test.propTypes = {
+  text: React.PropTypes.string.isRequired
+};

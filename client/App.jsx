@@ -6,6 +6,7 @@ var cs = React.addons.classSet;
 
 Users = new Meteor.Collection("users");
 
+
 App = ReactMeteor.createClass({
   mixins: [ReactMeteor.Mixin],
 
@@ -21,18 +22,33 @@ App = ReactMeteor.createClass({
     this.setState({
       clickedCount: this.state.clickedCount + 1
     });
+    $('#modal1').openModal();
   },
 
   startMeteorSubscriptions() {
     Meteor.subscribe("users");
   },
 
-  render: function() {
+  render() {
 
     return (
       <div>
-        <h3>You've pressed the button <span className="red-text">{this.state.clickedCount} times</span>, chump.</h3>
-        <button className="button-margin" onClick={this.handleClick}>Click me!</button>
+        <h3>Button Presser, simple</h3>
+        <a
+          className="waves-effect waves-light btn"
+          href="#modal1"
+          onClick={this.handleClick}>
+            Click me
+        </a>
+        <div id="modal1" className="modal bottom-sheet">
+          <div className="modal-content">
+            <h4>You've clicked the button:</h4>
+            <h4>{this.state.clickedCount} times!</h4>
+          </div>
+          <div className="modal-footer">
+            <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Ok!</a>
+          </div>
+        </div>
       </div>
     );
   }
